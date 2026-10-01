@@ -1,0 +1,31 @@
+roomA = input("Enter Room A (DIRTY/CLEAN): ").upper()
+roomB = input("Enter Room B (DIRTY/CLEAN): ").upper()
+position = input("Enter Vacuum Position (A/B): ").upper()
+
+if position == "A":
+    print("\nVacuum at A")
+    if roomA == "DIRTY":
+        print("SUCK")
+        roomA = "CLEAN"
+   
+    print("MOVE RIGHT")
+    print("Vacuum at B")
+    if roomB == "DIRTY":
+        print("SUCK")
+        roomB = "CLEAN"
+
+elif position == "B":
+    print("\nVacuum at B")
+    if roomB == "DIRTY":
+        print("SUCK")
+        roomB = "CLEAN"
+       
+    print("MOVE LEFT")
+    print("Vacuum at A")
+    if roomA == "DIRTY":
+        print("SUCK")
+        roomA = "CLEAN"
+print("\nFinal State")
+print("Room A =", roomA)
+print("Room B =", roomB)
+print("STOP")
